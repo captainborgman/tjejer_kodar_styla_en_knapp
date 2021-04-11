@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Button: Bubbly */
+/* Credit: https://codepen.io/comehope/pen/eKqZjy */
 .btn--bubble {
     color: var(--c);
     font-size: 16px;
