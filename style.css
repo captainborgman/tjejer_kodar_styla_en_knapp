@@ -1,6 +1,79 @@
+body {
+    --c: goldenrod;
+    background-color: #151515;
+    margin: 0;
+    font-family: sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
 
- /* Skriv din css-kod här för att styla din knapp! */ 
+h1, h2, h3, h4, h5, h6 {
+    color:var(--c);
+}
 
- .btn {
-    background: red !important; 
+/* Button: Bubbly */
+.btn--bubble {
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 2.5em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.btn--bubble span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.btn--bubble:hover {
+    color: black;
+}
+
+.btn--bubble:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.btn--bubble span:nth-child(1) {
+    --n: 1;
+}
+
+.btn--bubble span:nth-child(2) {
+    --n: 2;
+}
+
+.btn--bubble span:nth-child(3) {
+    --n: 3;
+}
+
+.btn--bubble span:nth-child(4) {
+    --n: 4;
 }
